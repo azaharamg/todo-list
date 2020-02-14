@@ -5,7 +5,13 @@ const Todos = props => {
 		props.todos.map(todo => {
 			return (
 				<div className='collection-item' key={todo.id}>
-					<span>{todo.content}</span>
+					<span
+						onClick={() => {
+							props.deleteTodo(todo.id);
+						}}
+					>
+						{todo.content}
+					</span>
 				</div>
 			);
 		})
