@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 
 class AddTodo extends Component {
-	state = {
-		content: ''
-	};
+	constructor() {
+		super();
+		this.state = {
+			content: ''
+		};
+	}
 
 	handleChange = e => {
 		this.setState({

@@ -4,12 +4,15 @@ import Todos from './Todos';
 import AddTodo from './AddForm';
 
 class App extends Component {
-	state = {
-		todos: [
-			{ id: 1, content: 'Comprar leche' },
-			{ id: 2, content: 'Ir al taller' }
-		]
-	};
+	constructor() {
+		super();
+		this.state = {
+			todos: [
+				{ id: 1, content: 'Comprar leche' },
+				{ id: 2, content: 'Ir al taller' }
+			]
+		};
+	}
 
 	deleteTodo = id => {
 		const todos = this.state.todos.filter(todo => {
